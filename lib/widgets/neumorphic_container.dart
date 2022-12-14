@@ -2,9 +2,9 @@ import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:neumorphism_calculator/constants/colors.dart';
 
-class NeumorphismContainer extends StatelessWidget {
+class NeumorphicContainer extends StatelessWidget {
   final bool isDarkMode;
-  const NeumorphismContainer({required this.isDarkMode, super.key});
+  const NeumorphicContainer({required this.isDarkMode, super.key});
 
   @override
   Widget build(BuildContext context) {

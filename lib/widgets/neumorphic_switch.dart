@@ -4,17 +4,17 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/colors.dart';
 
-class NeumorphismSwitch extends StatefulWidget {
+class NeumorphicSwitch extends StatefulWidget {
   final bool isDarkMode;
   final VoidCallback onPressed;
-  const NeumorphismSwitch(
+  const NeumorphicSwitch(
       {required this.onPressed, required this.isDarkMode, super.key});
 
   @override
-  State<NeumorphismSwitch> createState() => _MyWidgetState();
+  State<NeumorphicSwitch> createState() => _MyWidgetState();
 }
 
-class _MyWidgetState extends State<NeumorphismSwitch> {
+class _MyWidgetState extends State<NeumorphicSwitch> {
   var pressed = true;
   @override
   Widget build(BuildContext context) {

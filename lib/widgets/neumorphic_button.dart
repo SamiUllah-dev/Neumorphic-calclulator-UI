@@ -4,13 +4,13 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/colors.dart';
 
-class NeumorphismButton extends StatefulWidget {
-  final isDarkMode;
+class NeumorphicButton extends StatefulWidget {
+  final bool isDarkMode;
   final String child;
 
   final VoidCallback onPressed;
 
-  const NeumorphismButton({
+  const NeumorphicButton({
     required this.child,
     required this.onPressed,
     this.isDarkMode = false,
@@ -18,10 +18,10 @@ class NeumorphismButton extends StatefulWidget {
   });
 
   @override
-  State<NeumorphismButton> createState() => _NeumorphismButtonState();
+  State<NeumorphicButton> createState() => _NeumorphicButtonState();
 }
 
-class _NeumorphismButtonState extends State<NeumorphismButton> {
+class _NeumorphicButtonState extends State<NeumorphicButton> {
   bool isPressed = false;
   @override
   Widget build(BuildContext context) {
@@ -67,8 +67,6 @@ class _NeumorphismButtonState extends State<NeumorphismButton> {
             ],
           ),
           child: SizedBox(
-            // height: 200,
-            // width: 200,
             child: Center(
               child: Text(
                 widget.child,
@@ -77,7 +75,7 @@ class _NeumorphismButtonState extends State<NeumorphismButton> {
                     fontWeight: FontWeight.bold,
                     color: widget.isDarkMode
                         ? lightShadowTopColor
-                        : Color(0xFF66727C)),
+                        : const Color(0xFF66727C)),
               ),
             ),
           ),

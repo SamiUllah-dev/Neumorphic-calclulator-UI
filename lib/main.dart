@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
-import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
-import 'package:neumorphism_calculator/constants/colors.dart';
-import 'package:neumorphism_calculator/widgets/neumorphism_button.dart';
-import 'package:neumorphism_calculator/widgets/neumorphism_container.dart';
-import 'package:neumorphism_calculator/widgets/neumorphism_switch.dart';
+import 'package:neumorphism_calculator/widgets/neumorphic_button.dart';
+import 'package:neumorphism_calculator/widgets/neumorphic_container.dart';
+import 'package:neumorphism_calculator/widgets/neumorphic_switch.dart';
 
 void main() => runApp(
       const MyApp(),
@@ -65,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
               isDarkMode ? const Color(0xFF2E3239) : const Color(0xFFE7ECEF),
           elevation: 0,
           actions: [
-            NeumorphismSwitch(
+            NeumorphicSwitch(
               isDarkMode: isDarkMode,
               onPressed: () {
                 setState(() {
@@ -84,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               Expanded(
                 flex: 40,
-                child: NeumorphismContainer(isDarkMode: isDarkMode),
+                child: NeumorphicContainer(isDarkMode: isDarkMode),
               ),
               const SizedBox(
                 height: 10,
@@ -102,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisSpacing: 10,
                     ),
                     itemBuilder: (context, index) {
-                      return NeumorphismButton(
+                      return NeumorphicButton(
                         onPressed: () {},
                         isDarkMode: isDarkMode,
                         child: buttonList[index],
